@@ -175,4 +175,10 @@ public class ComplexTest {
         assertEquals(onePlusI.scale(5), new Complex(5,5));
         assertEquals(oneMinusI.scale(3), new Complex(3,-3));
     }
+
+    @Test
+    void testEquals () {
+        assertEquals(false, twoI.equals(two));
+        assertEquals(true, oneMinusI.equals(new Complex(1,-1)));
+    }
 }
