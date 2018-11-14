@@ -154,4 +154,11 @@ public class ComplexTest {
         assertEquals(4, new Complex(4,0).modulus());
         assertEquals(1, minusOne.modulus());
     }
+
+    @Test
+    void testmultiply () {
+        assertEquals(oneMinusI.multiply(onePlusI), two);
+        assertEquals(minusI.multiply(minusOne), Complex.ZERO);
+        assertEquals(onePlusI.multiply(two), new Complex(2,2));
+    }
 }
