@@ -168,4 +168,11 @@ public class ComplexTest {
         assertEquals(minusOne.add(minusOne), new Complex(-2,0));
         assertEquals(oneMinusI.add(onePlusI), two);
     }
+
+    @Test
+    void testscale(){
+        assertEquals(minusOne.scale(-2), two);
+        assertEquals(onePlusI.scale(5), new Complex(5,5));
+        assertEquals(oneMinusI.scale(3), new Complex(3,-3));
+    }
 }
